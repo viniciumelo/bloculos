@@ -1,9 +1,8 @@
-import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the SlidePage page.
+ * Generated class for the LoginPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,20 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-slide',
-  templateUrl: 'slide.html',
+  selector: 'page-login',
+  templateUrl: 'login.html',
 })
-export class SlidePage {
+export class LoginPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SlidePage');
-  }
-
-  entrar(){
-    this.navCtrl.push(LoginPage);
+    console.log('ionViewDidLoad LoginPage');
   }
 
 }
