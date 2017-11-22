@@ -1,4 +1,6 @@
 import { LoginPage } from './../login/login';
+import { CadastroPage } from './../cadastro/cadastro';
+
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -25,6 +27,9 @@ export class SlidePage {
 
   entrar(){
     this.navCtrl.push(LoginPage);
+  }
+  cadastrar(){
+    this.navCtrl.push(CadastroPage);  
   }
 
 }
