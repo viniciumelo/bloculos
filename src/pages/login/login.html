@@ -14,7 +14,8 @@
 
 
 <ion-content style="background-image: url('assets/imgs/s1.png')" >
-  
+
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
     <ion-list >
         <br>
         <br>
@@ -24,20 +25,20 @@
         <br>
           <ion-item style="background-color: transparent">
             <ion-label floating>Email</ion-label>
-            <ion-input type="text" value=""></ion-input>
+            <ion-input type="text" [(ngModel)]="loginForm.email" placeholder="Insira seu email" formControlName="email"></ion-input>
           </ion-item>
         
           <ion-item style="background-color: transparent">
             <ion-label floating>Senha</ion-label>
-            <ion-input type="password"></ion-input>
+            <ion-input type="password" [(ngModel)]="loginForm.senha"  formControlName="senha"></ion-input>
           </ion-item>
           <br>
           <br>
-          <button ion-button  full style=" background-color: #559f3f;" >Entrar</button>
+          <button ion-button  full style=" background-color: #559f3f;" type="submit" [disabled]="loginForm.invalid" >Entrar</button>
           <br>
           <div align="center" style=" color: #559f3f;">
               <ion-icon name="mail"> Recurar Senha</ion-icon>
           </div>
         </ion-list>
-        
+  </form> 
 </ion-content>
